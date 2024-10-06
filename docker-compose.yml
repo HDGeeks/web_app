@@ -3,8 +3,11 @@ version: '3.8'
 services:
   flask-app:
     build:
-      context: .  # Use current directory (web_app) as the build context
+      context: .  
     ports:
-      - "5000:5000"  # Expose port 5000 on the host
+      - "5000:5000"  
     volumes:
-      - "/Users/hd/my_flask_app/static/:/app/static/" # Map 'static' folder from host to container
+      - "/home/ubuntu/application/web_app/static/:/app/static/"
+
+
+    
