@@ -6,6 +6,10 @@ app = Flask(__name__, static_folder='static')
 def my_file(filename="index.html"):
     return send_from_directory(app.static_folder,filename)
 
+@app.route("/welcome")
+def my_welcome(filename="welcome.html"):
+    return send_from_directory(app.static_folder,filename)
+
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
